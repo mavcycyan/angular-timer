@@ -1,0 +1,17 @@
+<main class="timer">
+  <div class="container">
+   <div class="timer-counter">
+      <span class="num">{{time.hours}}</span>
+      <span class="sep">:</span>
+      <span class="num">{{time.minutes}}</span>
+      <span class="sep">:</span>
+      <span class="num">{{time.seconds}}</span>
+    </div>
+    <div class="timer-btns">
+      <button type="button" class="start" *ngIf="!isStarted" (click)="startTimer(); isStarted = true">Start</button>
+      <button type="button" class="stop" *ngIf="isStarted" (click)="stopTimer(); isStarted = false">Stop</button>
+      <button type="button" class="wait" (click)="waitTimer()">Wait</button>
+      <button type="button" class="reset" (click)="resetTimer()">Reset</button>
+    </div>
+  </div>
+</main>
